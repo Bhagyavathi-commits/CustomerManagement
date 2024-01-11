@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.0</version>
+		<relativePath/> 
+	</parent>
+	<groupId>com.customermanagement</groupId>
+	<artifactId>management</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>management</name>
+	<description>Customer Management project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- Spark dependencies -->
+        <dependency>
+        	<groupId>org.apache.spark</groupId>
+        	<artifactId>spark-core_2.12</artifactId>
+        	<version>2.4.3</version>
+        </dependency>
+
+        <dependency>
+        	<groupId>org.apache.spark</groupId>
+        	<artifactId>spark-sql_2.12</artifactId>
+        	<version>2.4.3</version>
+        </dependency>
+        
+        <!-- Database Postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+	    <!-- Spring Boot Starter Test for JUnit 5 -->
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-test</artifactId>
+        	<scope>test</scope>
+        </dependency>
+        <!-- JUnit 5 Jupiter API -->
+        <dependency>
+        	<groupId>org.junit.jupiter</groupId>
+        	<artifactId>junit-jupiter-api</artifactId>
+        	<version>5.8.1</version> <!-- Use the latest version -->
+        <scope>test</scope>
+        </dependency>
+        <!-- JUnit 5 Jupiter Engine -->
+        <dependency>
+        	<groupId>org.junit.jupiter</groupId>
+        	<artifactId>junit-jupiter-engine</artifactId>
+        	<version>5.8.1</version> 
+        	<scope>test</scope>
+        </dependency>
+        <!-- Mockito for mocking objects -->
+        <dependency>
+        	<groupId>org.mockito</groupId>
+        	<artifactId>mockito-core</artifactId>
+        	<version>3.12.4</version> 
+        	<scope>test</scope>
+        </dependency>
+    	
+    	<!-- Swagger dependencies -->
+		<dependency>
+        	<groupId>io.springfox</groupId>
+        	<artifactId>springfox-swagger2</artifactId>
+        	<version>2.9.2</version>
+        </dependency>
+        <dependency>
+        	<groupId>io.springfox</groupId>
+        	<artifactId>springfox-swagger-ui</artifactId>
+        	<version>2.9.2</version>
+        </dependency>
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
